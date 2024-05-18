@@ -1,48 +1,21 @@
-from Livros.livro_fisico import Livro_fisico
+from livro import Livro
 
-class Livro_digital(Livro_fisico):
-    def __init__(self, nome_livro, nome_editora, nome_autor, qtd_paginas, nmr_edicao, tipo_capa, tipo_genero, faixa_etaria, tamanho_gb, preco):
-        super().__init__(nome_livro, nome_editora, nome_autor, qtd_paginas, nmr_edicao, tipo_capa, tipo_genero, faixa_etaria)
-        self.tamanho_gb = tamanho_gb
+class Livro_digital(Livro):
+    def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tamanho_mb, preco, disponivel=True, id_usuario=None):
+        super().__init__(id_livro,nome,isbn,editora,autor,qtd_paginas,nmr_edicao,genero,faixa_etaria)
+        self.tamanho_mb = tamanho_mb
         self.preco = preco
     
-    # Getters    
-    def get_tamanho_gb(self):
-        return self.tamanho_gb
-    
-    def get_preco(self):
-        return self.preco
 
-    # Setters
-    def set_tamanho_gb(self, tamanho_gb):
-        self.tamanho_gb = tamanho_gb
-        
-    def set_preco(self, preco):
-        self.preco = preco
-        
-# # Testando set
-# meu_Livro_digital = Livro_digital("", "", "", 0, 0, "", "", "", 0)
-# meu_Livro_digital.set_nome_livro("Aventuras no Espaço")
-# meu_Livro_digital.set_nome_editora("Editora X")
-# meu_Livro_digital.set_nome_autor("Autor Y")
-# meu_Livro_digital.set_qtd_paginas(200)
-# meu_Livro_digital.set_nmr_edicao(1)
-# meu_Livro_digital.set_tipo_capa("Digital")
-# meu_Livro_digital.set_tipo_genero("Ficção Científica")
-# meu_Livro_digital.set_faixa_etaria("Livre")
-# meu_Livro_digital.set_tamanho_gb(10)
+#Testando
+meu_Livro_digital = Livro_digital(8,"Aventuras no Espaço","4257-2","Editora X","Autor Y",200,1,"Ficção Científica",5,15,8.50)
 
-# # testando get
-# print("Nome do Livro:", meu_Livro_digital.get_nome_livro())
-# print("Editora:", meu_Livro_digital.get_nome_editora())
-# print("Autor:", meu_Livro_digital.get_nome_autor())
-# print("Número de Páginas:", meu_Livro_digital.get_qtd_paginas())
-# print("Número de Edição:", meu_Livro_digital.get_nmr_edicao())
-# print("Tipo de Capa:", meu_Livro_digital.get_tipo_capa())
-# print("Gênero:", meu_Livro_digital.get_tipo_genero())
-# print("Faixa Etária:", meu_Livro_digital.get_faixa_etaria())
-# print("Tamanho (GB):", meu_Livro_digital.get_tamanho_gb())
-
-# # testando get e set para int
-# meu_Livro_digital.set_tamanho_gb(15)
-# print("\nTamanho modificado (GB):", meu_Livro_digital.get_tamanho_gb())
+#Testando 
+print("Nome do Livro:", meu_Livro_digital.nome)
+print("Editora:", meu_Livro_digital.editora)
+print("Autor:", meu_Livro_digital.autor)
+print("Número de Páginas:", meu_Livro_digital.qtd_paginas)
+print("Número de Edição:", meu_Livro_digital.nmr_edicao)
+print("Gênero:", meu_Livro_digital.genero)
+print("Faixa Etária:", meu_Livro_digital.faixa_etaria)
+print("Tamanho (MB):", meu_Livro_digital.tamanho_mb)
