@@ -1,5 +1,4 @@
-from livro import Livro
-
+from Livros.livro import Livro
 class Livro_digital(Livro):
     def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tamanho_mb, preco, disponivel=True, id_usuario=None):
         super().__init__(id_livro,nome,isbn,editora,autor,qtd_paginas,nmr_edicao,genero,faixa_etaria)

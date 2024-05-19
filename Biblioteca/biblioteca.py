@@ -1,8 +1,10 @@
-from Pessoas.funcionario import Funcionario
-
 import uuid
-
 import sqlite3
+from Pessoas.funcionario import Funcionario
+from Livros.livro_fisico import Livro_fisico
+
+
+
 nome_banco = 'biblioteca.db'
 
 # Conectar ao banco de dados ou criar um novo se não existir
@@ -20,8 +22,8 @@ comando_sql = '''
         data_nascimento DATE,
         genero TEXT,
         telefone TEXT
-    )
-'''
+    )'''
+
 # Executar o comando SQL para criar a tabela
 cursor.execute(comando_sql)
 # Commit para salvar as alterações no banco de dados
@@ -47,7 +49,6 @@ class Biblioteca:
         print(f"Funcionário {nome} criado com sucesso.")
         return (nome, endereco, cpf, data_nascimento, genero, telefone, id_carterinha_funcionario)
 
-
     def gerar_id_funcionario(self):
         return str(uuid.uuid4())
 
@@ -55,13 +56,15 @@ class Biblioteca:
         for funcionario in self.funcionarios:
             print(funcionario)
 
-
 biblioteca = Biblioteca()
+
 # # Adicionar um novo funcionário
-novo_funcionario = biblioteca.criar_funcionario("Maria", "Rua ABC", "123.456.789-00", "01/01/1980", "Feminino", "9999-8888")
+novo_funcionario = biblioteca.criar_funcionario("Maria", "Rua ABC", "123.456.789-01", "01/01/1980", "Feminino", "9999-8888")
 biblioteca.imprimir_funcionarios()
+
 # Executar o comando SQL de inserção para cada livro
 cursor.execute(comando_sql_insercao, novo_funcionario)
+
 # Commit para salvar as alterações no banco de dados
 conn.commit()
 conn.close()
