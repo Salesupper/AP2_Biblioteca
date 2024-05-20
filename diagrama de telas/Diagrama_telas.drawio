@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2024-05-17T02:01:16.558Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="jBuufCDjMECYYCxxUz08" version="24.4.3" type="device">
+  <diagram name="Página-1" id="RHRCFlecHZfMnTh9Cg0X">
+    <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KrMuktubT4KBwQT5NoA7-21" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Tela Inicial&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="323" y="25" width="180.41" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-22" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Usuario&lt;br&gt;Senha&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-21" vertex="1">
+          <mxGeometry y="50" width="180.41" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-23" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Tela funcionario&lt;br&gt;&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="297.5" width="180.41" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-24" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;cad usuario&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;cad livro&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;emprestar livro&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-23" vertex="1">
+          <mxGeometry y="50" width="180.41" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-26" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Cadastrar livros&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="72.27" y="530" width="195.87" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-27" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;id_livro&lt;/font&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;nome_livro&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;nome_editora&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;nome_autor&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;qtd_paginas&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;nmr_edicao&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;tipo_capa &lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;tipo_genero&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;faixa_etaria &lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;tamanho_gb&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-26" vertex="1">
+          <mxGeometry y="50" width="195.87" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-31" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Tela Usuario&lt;br&gt;&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="300" width="175.26" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-32" value="&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;solicitar emprestimo&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;atualizar dados&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;listar emprestimos&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-31" vertex="1">
+          <mxGeometry y="50" width="175.26" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-33" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;pedir_emprestimo&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="557.11" y="560" width="201.03" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-34" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;num carteirinha&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;id_livro&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;nome_livro&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Isbn&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-33" vertex="1">
+          <mxGeometry y="50" width="201.03" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-37" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KrMuktubT4KBwQT5NoA7-22" target="KrMuktubT4KBwQT5NoA7-23" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="150" y="220" as="sourcePoint" />
+            <mxPoint x="310" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-38" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KrMuktubT4KBwQT5NoA7-22" target="KrMuktubT4KBwQT5NoA7-31" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="333" y="210" as="sourcePoint" />
+            <mxPoint x="220" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KrMuktubT4KBwQT5NoA7-32" target="KrMuktubT4KBwQT5NoA7-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-46" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Tela autorizar emprestimo&lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt; &lt;br&gt;&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="72.27000000000007" y="1280" width="195.87" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-47" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;id_livro&lt;/font&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;nome_livro&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;isbn&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;usuario_pedinte&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-46" vertex="1">
+          <mxGeometry y="50" width="195.87" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KrMuktubT4KBwQT5NoA7-24" target="KrMuktubT4KBwQT5NoA7-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-55" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Cadastrar usuario&lt;br&gt;&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="72.26999999999998" y="900" width="195.87" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-56" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;id_usuario&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;id_funcionario&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;nome &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;endereco&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;cpf&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;data_nascimento &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;genero&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;telefone&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;tipo_usuario&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-55" vertex="1">
+          <mxGeometry y="50" width="195.87" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="KrMuktubT4KBwQT5NoA7-56" target="KrMuktubT4KBwQT5NoA7-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-59" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Atualizar Cadastro&lt;br&gt;&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="559.6999999999999" y="850" width="195.87" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-60" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;nome &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;endereco&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;cpf&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;data_nascimento &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;genero&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;telefone&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" parent="KrMuktubT4KBwQT5NoA7-59" vertex="1">
+          <mxGeometry y="50" width="195.87" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="KrMuktubT4KBwQT5NoA7-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="KrMuktubT4KBwQT5NoA7-34" target="KrMuktubT4KBwQT5NoA7-59" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y4p04OQ01IBWSQ9WFt8B-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KrMuktubT4KBwQT5NoA7-27" target="KrMuktubT4KBwQT5NoA7-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
