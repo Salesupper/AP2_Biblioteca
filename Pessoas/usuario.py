@@ -15,22 +15,11 @@ class Usuario(Pessoa):
     def id_usuario(self, id_usuario):
         self._id_usuario = id_usuario
 
-
+    def __str__(self):
+        return f'''Nome: {self.nome}, CPF: {self._cpf},Endereço: {self._endereco},
+        Data de Nascimento: {self.data_nascimento}, 
+        Gênero: {self.genero}, Telefone: {self._telefone}, 
+        ID Carteirinha: {self._id_usuario}'''
 
 carlin = Usuario(50,'Carlos','rua das flores','422-222','03-05-1999','m','1192222-5555')
-
-#usando get
-# print(carlin.get_id_usuario())
-
-#usando @property
-print(carlin.id_usuario)
-
-#usando set
-# carlin.set_id_usuario(12)
-# print(carlin.id_usuario)
-
-#usando setter
-carlin.id_usuario = 20
-print(carlin.id_usuario)
-
-
+print(carlin.__str__())

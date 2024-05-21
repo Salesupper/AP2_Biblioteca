@@ -1,4 +1,4 @@
-from pessoa import Pessoa
+from Pessoas.pessoa import Pessoa
 
 class Funcionario (Pessoa):
     def __init__(self, id_funcionario, nome, endereco, cpf, data_nascimento, genero, telefone):
@@ -40,12 +40,11 @@ class Funcionario (Pessoa):
         self._telefone = telefone
         
     def __str__(self):
-        return f'''Nome: {self._nome}, CPF: {self._cpf},Endereço: {self._endereco},
-        Data de Nascimento: {self._data_nascimento}, 
-        Gênero: {self._genero}, Telefone: {self._telefone}, 
+        return f'''Nome: {self.nome}, CPF: {self._cpf},Endereço: {self._endereco},
+        Data de Nascimento: {self.data_nascimento}, 
+        Gênero: {self.genero}, Telefone: {self._telefone}, 
         ID Carteirinha: {self._id_funcionario}'''
 
-'''
-carlin = Funcionario('Carlos','rua das flores','422-222','03-05-1999','m','1192222-5555',50)
+'''carlin = Funcionario('50','Carlos','rua das flores','11122233344455','03-05-1999','m',"1192222-5555")
 print(carlin.__str__())
 '''
