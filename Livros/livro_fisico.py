@@ -1,5 +1,4 @@
 import sqlite3
-import uuid
 from Livros.livro import Livro
 
 class Livro_fisico(Livro):
@@ -11,7 +10,7 @@ class Livro_fisico(Livro):
     def __str__(self):
         return f"ID: {self.id_livro}, Nome: {self.nome}, ISBN: {self.isbn}, Editora: {self.editora}, Autor: {self.autor}, Páginas: {self.qtd_paginas}, Edição: {self.nmr_edicao}, Gênero: {self.genero}, Faixa Etária: {self.faixa_etaria}, Tipo de Capa: {self.tipo_capa}"
 
-nome_banco = "livros.db"
+nome_banco = "biblioteca.db"
 
 def criar_tabela_livros_fisicos():
     try:
@@ -94,7 +93,7 @@ criar_tabela_livros_fisicos()
 
 # Example usage:
 novo_livro = Livro_fisico(
-    id_livro = 8,
+    id_livro = 0,
     nome="1984",
     isbn="77722-2",
     editora="São Carlos",
@@ -107,6 +106,6 @@ novo_livro = Livro_fisico(
     disponivel=True
 )
 
-adicionar_livro_banco(nome_banco, novo_livro)
-alterar_status_livro(nome_banco, "8", True)
-deletar_livro_fisico(nome_banco, "8")
+#adicionar_livro_banco(nome_banco, novo_livro)
+#alterar_status_livro(nome_banco, "8", True)
+#deletar_livro_fisico(nome_banco, "8")
