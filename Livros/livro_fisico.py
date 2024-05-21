@@ -89,6 +89,26 @@ def alterar_status_livro(nome_banco, id_livro, disponivel):
     except sqlite3.Error as e:
         print(f"Erro ao alterar o status do livro no banco de dados: {e}")
 
+def consultar_livro_por_id(nome_banco, id_livro):
+    try:
+        with sqlite3.connect(nome_banco) as conn:
+            cursor = conn.cursor()
+
+            comando_sql = '''
+            SELECT * FROM livros_fisicos WHERE id_livro = ?
+            '''
+            cursor.execute(comando_sql, (id_livro,))
+            livro = cursor.fetchone()
+
+            if livro:
+                return Livro_fisico(*livro)
+            else:
+                print("Nenhum livro encontrado com o ID fornecido.")
+                return None
+    except sqlite3.Error as e:
+        print(f"Erro ao consultar livro no banco de dados: {e}")
+        return None
+
 criar_tabela_livros_fisicos()
 
 # Example usage:
@@ -107,5 +127,8 @@ novo_livro = Livro_fisico(
 )
 
 #adicionar_livro_banco(nome_banco, novo_livro)
-#alterar_status_livro(nome_banco, "8", True)
+#alterar_status_livro(nome_banco, "0", False)
 #deletar_livro_fisico(nome_banco, "8")
+livro_consultado = consultar_livro_por_id(nome_banco, 0)
+if livro_consultado:
+    print(livro_consultado)

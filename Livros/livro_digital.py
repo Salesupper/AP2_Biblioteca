@@ -7,6 +7,10 @@ class Livro_digital(Livro):
         self.id_livro = id_livro
         self.tamanho_mb = tamanho_mb
         self.disponivel = disponivel
+
+    def __str__(self):
+        return f"ID: {self.id_livro}, Nome: {self.nome}, ISBN: {self.isbn}, Editora: {self.editora}, Autor: {self.autor}, Páginas: {self.qtd_paginas}, Edição: {self.nmr_edicao}, Gênero: {self.genero}, Faixa Etária: {self.faixa_etaria}, tamanho em MB: {self.tamanho_mb}"
+
     
 nome_banco = "biblioteca.db"
 
@@ -87,6 +91,26 @@ def alterar_status_livro(nome_banco, id_livro, disponivel):
     except sqlite3.Error as e:
         print(f"Erro ao alterar o status do livro no banco de dados: {e}")
 
+def consultar_livro_por_id(nome_banco, id_livro):
+    try:
+        with sqlite3.connect(nome_banco) as conn:
+            cursor = conn.cursor()
+
+            comando_sql = '''
+            SELECT * FROM livros_digitais WHERE id_livro = ?
+            '''
+            cursor.execute(comando_sql, (id_livro,))
+            livro = cursor.fetchone()
+
+            if livro:
+                return Livro_digital(*livro)
+            else:
+                print("Nenhum livro encontrado com o ID fornecido.")
+                return None
+    except sqlite3.Error as e:
+        print(f"Erro ao consultar livro no banco de dados: {e}")
+        return None
+
 criar_tabela_livros_digitais()
 
 novo_livro = Livro_digital(
@@ -106,4 +130,7 @@ novo_livro = Livro_digital(
 #adicionar_livro_banco(nome_banco, novo_livro)
 #deletar_livro_digital(nome_banco, "0")
 #alterar_status_livro(nome_banco, "0", False)
+livro_consultado = consultar_livro_por_id(nome_banco, 0)
+if livro_consultado:
+    print(livro_consultado)
 
