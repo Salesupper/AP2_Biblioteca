@@ -1,4 +1,6 @@
-class Pessoa:
+from abc import ABC
+
+class Pessoa(ABC):
     def __init__(self, nome, endereco, cpf, data_nascimento, genero, telefone):
         self.nome = nome
         self._endereco = endereco

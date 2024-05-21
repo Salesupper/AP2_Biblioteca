@@ -11,7 +11,6 @@ class Livro_digital(Livro):
     def __str__(self):
         return f"ID: {self.id_livro}, Nome: {self.nome}, ISBN: {self.isbn}, Editora: {self.editora}, Autor: {self.autor}, Páginas: {self.qtd_paginas}, Edição: {self.nmr_edicao}, Gênero: {self.genero}, Faixa Etária: {self.faixa_etaria}, tamanho em MB: {self.tamanho_mb}"
 
-    
 nome_banco = "biblioteca.db"
 
 def criar_tabela_livros_digitais():
@@ -133,4 +132,3 @@ novo_livro = Livro_digital(
 livro_consultado = consultar_livro_por_id(nome_banco, 0)
 if livro_consultado:
     print(livro_consultado)
-

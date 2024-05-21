@@ -1,4 +1,6 @@
-class Livro:
+from abc import(ABC)
+
+class Livro(ABC):
     def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, disponivel=True, id_usuario=None):
         self.id_livro = id_livro
         self.nome = nome
