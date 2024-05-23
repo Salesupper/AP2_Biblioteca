@@ -2,7 +2,7 @@ import sqlite3
 from Livros.livro import Livro
 
 class Livro_digital(Livro):
-    def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tamanho_mb, disponivel=True, id_usuario=None):
+    def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tamanho_mb, disponivel=True):
         super().__init__(id_livro,nome,isbn,editora,autor,qtd_paginas,nmr_edicao,genero,faixa_etaria)
         self.id_livro = id_livro
         self.tamanho_mb = tamanho_mb
