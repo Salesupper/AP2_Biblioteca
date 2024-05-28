@@ -2,11 +2,12 @@ import sqlite3
 from Livros.livro import Livro
 
 class Livro_fisico(Livro):
-    def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tipo_capa, disponivel=True, id_usuario=None):
+    def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tipo_capa, disponivel=True):
         super().__init__(id_livro,nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria)
         self.id_livro = id_livro
         self.tipo_capa = tipo_capa
         self.disponivel = disponivel
+    
     def __str__(self):
         return f"ID: {self.id_livro}, Nome: {self.nome}, ISBN: {self.isbn}, Editora: {self.editora}, Autor: {self.autor}, Páginas: {self.qtd_paginas}, Edição: {self.nmr_edicao}, Gênero: {self.genero}, Faixa Etária: {self.faixa_etaria}, Tipo de Capa: {self.tipo_capa}"
 
