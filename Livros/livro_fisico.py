@@ -113,23 +113,23 @@ def consultar_livro_por_id(nome_banco, id_livro):
 criar_tabela_livros_fisicos()
 
 # Example usage:
-novo_livro = Livro_fisico(
-    id_livro = 0,
-    nome="1984",
-    isbn="77722-2",
-    editora="São Carlos",
-    autor="George",
-    qtd_paginas=271,
-    nmr_edicao=3,
-    genero="ficção",
-    faixa_etaria=18,
-    tipo_capa="dura",
-    disponivel=True
-)
+# novo_livro = Livro_fisico(
+#     id_livro = 9,
+#     nome = input("Digite o nome do livro: "),
+#     isbn = int(input("Digite o isbn do livro: ")),
+#     editora = input("Digite o nome da editora: "),
+#     autor = input("Digite o nome do autor: "),
+#     qtd_paginas = int(input("Digite a quantidade de paginas do livro: ")),
+#     nmr_edicao = int(input("Digite o numero da edição: ")),
+#     genero = input("Digite o genero do Livro: "),
+#     faixa_etaria = int(input("Digite a faixa etaria do livro: ")),
+#     tipo_capa="dura",
+#     disponivel=True
+# )
 
 #adicionar_livro_banco(nome_banco, novo_livro)
 #alterar_status_livro(nome_banco, "0", False)
-#deletar_livro_fisico(nome_banco, "8")
-livro_consultado = consultar_livro_por_id(nome_banco, 0)
-if livro_consultado:
-    print(livro_consultado)
+deletar_livro_fisico(nome_banco, "9")
+# livro_consultado = consultar_livro_por_id(nome_banco, 9)
+# if livro_consultado:
+#     print(livro_consultado)
