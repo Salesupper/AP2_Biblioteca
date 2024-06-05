@@ -3,7 +3,7 @@ from datetime import datetime
 from src.livros.livro import Livro
 from src.pessoas.funcionario import Funcionario
 from src.pessoas.usuario import Usuario
-
+from src.livros.livro_digital import alterar_status_livro
 
 class Emprestimo(Livro, Usuario, Funcionario):
     def __init__(self, id_livro, id_usuario, id_funcionario, nome, edicao, isbn, prazo, entregue):
@@ -53,11 +53,45 @@ def criar_tabela_emprestimos():
                     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
                     FOREIGN KEY (id_livro) REFERENCES livros(id)
                 )''')
-        cursor.execute(comando_sql)
-
-        print("Tabela empréstimo criada com sucesso.")
+            cursor.execute(comando_sql)
+            print("Tabela empréstimo criada com sucesso.")
     except sqlite3.Error as e:
         print(f"Erro ao criar tabela empréstimo: {e}")
 
+def registrar_emprestimo(nome_banco, id_usuario, id_livro, data_emprestimo, data_devolucao):
+    try:
+        with sqlite3.connect(nome_banco) as conn:
+            cursor = conn.cursor()
+            comando_sql = '''
+            INSERT INTO emprestimos (id_usuario, id_livro, data_emprestimo, data_devolucao)
+            VALUES (?, ?, ?, ?)
+            '''
+            valores = (id_usuario, id_livro, data_emprestimo, data_devolucao)
+            cursor.execute(comando_sql, valores)
+            
+            # Alterar o status do livro para indisponível (0)
+            alterar_status_livro(nome_banco, id_livro, 0)
+            
+            print("Empréstimo registrado com sucesso.")
+    except sqlite3.Error as e:
+        print(f"Erro ao registrar empréstimo: {e}")
 
-criar_tabela_emprestimos()
+def consultar_todos_emprestimos(nome_banco):
+    try:
+        conn = sqlite3.connect(nome_banco)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM emprestimos")
+        emprestimos = cursor.fetchall()
+        conn.close()
+        return emprestimos
+    except sqlite3.Error as e:
+        print(f"Erro ao consultar todos os empréstimos: {e}")
+        return None
+
+def consultar_emprestimo_por_id(nome_banco, id_emprestimo):
+    conn = sqlite3.connect(nome_banco)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM emprestimos WHERE id = ?", (id_emprestimo,))
+    emprestimo = cursor.fetchone()
+    conn.close()
+    return emprestimo

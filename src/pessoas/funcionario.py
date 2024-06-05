@@ -1,5 +1,5 @@
 import sqlite3
-from .pessoa import Pessoa
+from src.pessoas.pessoa import Pessoa
 
 class Funcionario (Pessoa):
     def __init__(self, id_funcionario, nome, endereco, cpf, data_nascimento, genero, telefone):
@@ -45,11 +45,6 @@ class Funcionario (Pessoa):
         Data de Nascimento: {self.data_nascimento}, 
         Gênero: {self.genero}, Telefone: {self._telefone}, 
         ID Carteirinha: {self._id_funcionario}'''
-
-'''carlin = Funcionario('50','Carlos','rua das flores','11122233344455','03-05-1999','m',"1192222-5555")
-print(carlin.__str__())
-'''
-
 
 nome_banco = "biblioteca.db"
 
@@ -120,7 +115,7 @@ def consultar_funcionario_por_id(nome_banco, id_funcionario):
             cursor = conn.cursor()
 
             comando_sql = '''
-            SELECT * FROM funcionario WHERE id_funcionario = ?
+            SELECT * FROM funcionarios WHERE id_funcionario = ?
             '''
             cursor.execute(comando_sql, (id_funcionario,))
             Funcionario = cursor.fetchone()
@@ -134,26 +129,14 @@ def consultar_funcionario_por_id(nome_banco, id_funcionario):
         print(f"Erro ao consultar funcionário no banco de dados: {e}")
         return None
 
-#função para emprestimo, alterar status. 
-
-# criar_tabela_funcionarios()
-#id_funcionario, nome, endereco, cpf, data_nascimento, genero, telefone
-# Example usage :
-novofuncionario = Funcionario(
-    id_funcionario= 0,
-    nome="Jullyen",
-    endereco="Rua da amargura",
-    cpf="36574149836",
-    data_nascimento= "06-30-1993",
-    genero="F",
-    telefone="11970230127"
-)
-# adicionar_funcionario(nome_banco, novofuncionario)
-
-# adicionar_funcionario(nome_banco, funcionario)
-deletar_funcionario(nome_banco, 0)
-# #alterar_status_livro(nome_banco, "0", False)
-# #deletar_livro_fisico(nome_banco, "8")
-# livro_consultado = consultar_livro_por_id(nome_banco, 0)
-# if livro_consultado:
-#     print(livro_consultado)
+def consultar_todos_funcionarios(nome_banco):
+    try:
+        conn = sqlite3.connect(nome_banco)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM funcionarios")
+        funcionarios = cursor.fetchall()
+        conn.close()
+        return funcionarios
+    except sqlite3.Error as e:
+        print(f"Erro ao consultar todos os funcionários: {e}")
+        return None

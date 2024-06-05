@@ -1,5 +1,5 @@
 import sqlite3
-from livros.livro import Livro
+from src.livros.livro import Livro
 
 class Livro_digital(Livro):
     def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tamanho_mb, disponivel=True):
@@ -110,25 +110,31 @@ def consultar_livro_por_id(nome_banco, id_livro):
         print(f"Erro ao consultar livro no banco de dados: {e}")
         return None
 
-criar_tabela_livros_digitais()
+def consultar_todos_livros_digitais(nome_banco):
+    try:
+        conn = sqlite3.connect(nome_banco)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM livros_digitais")
+        livros = cursor.fetchall()
+        conn.close()
+        return livros
+    except sqlite3.Error as e:
+        print(f"Erro ao consultar todos os livros digitais: {e}")
+        return None
 
-novo_livro = Livro_digital(
-    id_livro = 0,
-    nome="1984",
-    isbn="77722-2",
-    editora="São Carlos",
-    autor="George",
-    qtd_paginas=271,
-    nmr_edicao=3,
-    genero="ficção",
-    faixa_etaria=18,
-    tamanho_mb = 800,
-    disponivel = True
-)
+def devolver_livro_digital(nome_banco, id_livro):
+    try:
+        with sqlite3.connect(nome_banco) as conn:
+            cursor = conn.cursor()
 
-#adicionar_livro_banco(nome_banco, novo_livro)
-#deletar_livro_digital(nome_banco, "0")
-#alterar_status_livro(nome_banco, "0", False)
-livro_consultado = consultar_livro_por_id(nome_banco, 0)
-if livro_consultado:
-    print(livro_consultado)
+            comando_sql = '''
+            UPDATE livros_fisicos SET disponivel = ? WHERE id_livro = ?
+            '''
+            cursor.execute(comando_sql, (1, id_livro))
+
+            if cursor.rowcount > 0:
+                print("Livro digital devolvido com sucesso.")
+            else:
+                print("Nenhum livro digital encontrado com o ID fornecido.")
+    except sqlite3.Error as e:
+        print(f"Erro ao devolver livro digital: {e}")

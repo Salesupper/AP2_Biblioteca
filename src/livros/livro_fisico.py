@@ -1,5 +1,5 @@
 import sqlite3
-from livros.livro import Livro
+from src.livros.livro import Livro
 
 class Livro_fisico(Livro):
     def __init__(self, id_livro, nome, isbn, editora, autor, qtd_paginas, nmr_edicao, genero, faixa_etaria, tipo_capa, disponivel=True):
@@ -109,27 +109,35 @@ def consultar_livro_por_id(nome_banco, id_livro):
     except sqlite3.Error as e:
         print(f"Erro ao consultar livro no banco de dados: {e}")
         return None
+    
+def consultar_todos_livros_fisicos(nome_banco):
+    try:
+        conn = sqlite3.connect(nome_banco)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM livros_fisicos")
+        livros = cursor.fetchall()
+        conn.close()
+        return livros
+    except sqlite3.Error as e:
+        print(f"Erro ao consultar todos os livros físicos: {e}")
+        return None
 
-criar_tabela_livros_fisicos()
+def devolver_livro_fisico(nome_banco, id_livro):
+    try:
+        with sqlite3.connect(nome_banco) as conn:
+            cursor = conn.cursor()
 
-# Example usage:
-# novo_livro = Livro_fisico(
-#     id_livro = 9,
-#     nome = input("Digite o nome do livro: "),
-#     isbn = int(input("Digite o isbn do livro: ")),
-#     editora = input("Digite o nome da editora: "),
-#     autor = input("Digite o nome do autor: "),
-#     qtd_paginas = int(input("Digite a quantidade de paginas do livro: ")),
-#     nmr_edicao = int(input("Digite o numero da edição: ")),
-#     genero = input("Digite o genero do Livro: "),
-#     faixa_etaria = int(input("Digite a faixa etaria do livro: ")),
-#     tipo_capa="dura",
-#     disponivel=True
-# )
+            # Verifica se o livro está disponível para devolução
+            livro = consultar_livro_por_id(nome_banco, id_livro)
+            if not livro:
+                print("Livro não encontrado.")
+                return
+            if livro.disponivel:
+                print("O livro já está disponível.")
+                return
 
-#adicionar_livro_banco(nome_banco, novo_livro)
-#alterar_status_livro(nome_banco, "0", False)
-deletar_livro_fisico(nome_banco, "9")
-# livro_consultado = consultar_livro_por_id(nome_banco, 9)
-# if livro_consultado:
-#     print(livro_consultado)
+            # Atualiza o status do livro para disponível (1)
+            alterar_status_livro(nome_banco, id_livro, True)
+            print("Livro devolvido com sucesso.")
+    except sqlite3.Error as e:
+        print(f"Erro ao devolver o livro: {e}")
