@@ -1,7 +1,12 @@
 import sys
-from Livros.livro_digital import Livro_digital, criar_tabela_livros_digitais, adicionar_livro_banco, deletar_livro_digital, alterar_status_livro, consultar_livro_por_id
-from Livros.livro_fisico import Livro_fisico, criar_tabela_livros_fisicos, adicionar_livro_banco as adicionar_livro_fisico, deletar_livro_fisico, consultar_livro_por_id as consultar_livro_fisico_por_id
-from Pessoas.funcionario import Funcionario, criar_tabela_funcionarios, adicionar_funcionario, deletar_funcionario, consultar_funcionario_por_id
+from src.livros.livro_digital import Livro_digital, criar_tabela_livros_digitais, adicionar_livro_banco, deletar_livro_digital, alterar_status_livro, consultar_livro_por_id
+from src.livros.livro_fisico import Livro_fisico, criar_tabela_livros_fisicos, adicionar_livro_banco as adicionar_livro_fisico, deletar_livro_fisico, consultar_livro_por_id as consultar_livro_fisico_por_id
+from src.pessoas.funcionario import Funcionario, criar_tabela_funcionarios, adicionar_funcionario, deletar_funcionario, consultar_funcionario_por_id
+from src.servicos import emprestimo
+
+emprestimo.Emprestimo()
+emprestimo = emprestimo.Emprestimo(1, 101, 201, "Livro Exemplo", "1ª Edição", "123456789", "2024-06-15", False)
+print(emprestimo.get_nome())
 
 nome_banco = "biblioteca.db"
 

@@ -1,5 +1,5 @@
-from Pessoas import Usuario
-from Livros import livro_digital
+from pessoas import Usuario
+from livros import livro_digital
 
 class Aluguel:
     def __init__(self,id_livro,id_usuario,nome,edicao,isbn,prazo,preco):
