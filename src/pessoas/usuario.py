@@ -1,4 +1,4 @@
-from pessoa import Pessoa
+from .pessoa import Pessoa
 
 class Usuario(Pessoa):
     def __init__(self, id_usuario, nome, endereco, cpf, data_nascimento, genero, telefone):
