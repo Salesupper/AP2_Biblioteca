@@ -126,7 +126,7 @@ novo_livro = Livro_digital(
     disponivel = True
 )
 
-#adicionar_livro_banco(nome_banco, novo_livro)
+# adicionar_livro_banco(nome_banco, novo_livro)
 #deletar_livro_digital(nome_banco, "0")
 #alterar_status_livro(nome_banco, "0", False)
 livro_consultado = consultar_livro_por_id(nome_banco, 0)
